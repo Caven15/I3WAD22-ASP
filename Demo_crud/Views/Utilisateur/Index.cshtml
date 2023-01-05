@@ -1,0 +1,9 @@
+﻿@*ici je vais afficher la liste de mes utilisateur*@
+@model IEnumerable<Demo_crud.Models.Utilisateur>
+
+
+@foreach (Utilisateur utilisateur in Model)
+{
+    <h3>@utilisateur.Id</h3>
+    <h3>@utilisateur.Nom</h3>
+}

@@ -1,0 +1,17 @@
+﻿@using Cor_Crud_book.FakeDb
+@model Cor_Crud_book.Models.Auteur
+
+<h1>Detail</h1>
+
+<p>@Model.Id</p>
+<p>@Model.Nom</p>
+<p>@Model.Prenom</p>
+<p>@Model.DateNaissance</p>
+
+<div>
+    <h4> Liste Livre(s)</h4>
+    <hr/>
+    @foreach(Livre l in LivreDB.Livres){
+        <p>@l.Titre</p>
+    }
+</div>

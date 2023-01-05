@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Cor_Crud_book.Models.Auteur>
+
+<h2>Liste des auteurs</h2>
+<a asp-action="Create" class="btn btn-outline-primary">Ajouter un auteur</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Date de naissance</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Auteur auteur in Model){
+            <tr>
+                <td>@auteur.Nom</td>
+                <td>@auteur.Prenom</td>
+                <td>@auteur.DateNaissance</td>
+
+                <td>
+                    <a asp-action="Detail" asp-route-id="@auteur.Id" class="btn btn-outline-info">Details</a>
+                    <a class="btn btn-outline-warning">Modifier</a>
+                    <a class="btn btn-outline-danger">Supprimer</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
